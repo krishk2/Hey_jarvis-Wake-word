@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysaa Wake Word Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Main Interface -->
+        <div class="orb-container">
+            <div id="orb" class="orb"></div>
+            <div id="orb-glow" class="orb-glow"></div>
+        </div>
+
+        <h1 class="title">Listening for <span class="highlight">"Hey Jarvis"</span></h1>
+        <p class="subtitle" id="status-text">Connecting to server...</p>
+
+        <button id="mic-btn" class="mic-btn">Enable Microphone</button>
+    </div>
+
+    <!-- Glassmorphic Popup Modal -->
+    <div id="popup-overlay" class="popup-overlay hidden">
+        <div class="popup-card">
+            <div class="icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="check-icon">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h2>Wake Word Detected!</h2>
+            <p>I heard "Hey Jarvis". What can I help you with?</p>
+            <button id="close-popup" class="primary-btn">Acknowledge</button>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
